@@ -45,7 +45,7 @@ namespace LotoApp
             {
                 int[] nums = d.Key.Split(',').Select(int.Parse).ToArray();
                 int diff = nums[5] - nums[0];
-                if (diff <= m_diffToShow)
+                if (diff == m_diffToShow || m_diffToShow == 1000)
                 {
                     labels.Add(d.Value.Item2.ToShortDateString());
                     data.Add(diff);
